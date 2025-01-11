@@ -92,7 +92,7 @@ TakeUBackward is a React-based responsive quiz app offering questions on both ol
 
 ### 2. **Instructions Page**:
    - Displays clear instructions for the quiz.
-   - After a brief 3-second delay, the app automatically moves to the quiz component.
+   - After a brief 10-second delay, the app automatically moves to the quiz component.
 
 ### 3. **Quiz Component**:
    - Displays a series of shuffled questions (from `quizData.js`) with multiple-choice options.
