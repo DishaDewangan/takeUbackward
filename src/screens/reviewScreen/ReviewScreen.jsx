@@ -1,27 +1,41 @@
-import styles from "./ReviewScreen.module.css";
-import appStyles from "../../App.module.css";
-import { quizData } from "../../utils/quizData";
-import { InfoToolTip } from "../../components/toolTip/InfoToolTip";
-import { Question } from "../../components/question/Question";
-import cx from "classnames";
+import{useState}from"react";
+import styles from"./ReviewScreen.module.css";
+import appStyles from"../../App.module.css";
+import {quizData}from"../../utils/quizData";
+import {InfoToolTip}from"../../components/toolTip/InfoToolTip";
+import {Question}from"../../components/question/Question";
+import cx from"classnames";
 
-export const ReviewScreen = ({ setIsRetake }) => {
-  const { questions } = quizData;
+export const ReviewScreen=({setIsRetake})=>{
+  const {questions}=quizData;
 
-  return (
-    <div className={cx(appStyles.fadeInRight, styles.reviewScreenWrapper)}>
+  const [userAnswers,setUserAnswers]=useState(()=>{
+
+    return questions.map(()=>null);
+  });
+
+  const handleAnswerSelection=(questionIndex,selectedAnswer)=>{
+    const updatedAnswers=[...userAnswers];
+    updatedAnswers[questionIndex]=selectedAnswer;
+    setUserAnswers(updatedAnswers);
+  };
+
+  return(
+    <div className={cx(appStyles.fadeInRight,styles.reviewScreenWrapper)}>
       <div className={styles.reviewScreen}>
+     
         <div className={styles.columnContainer}>
-          <div className={styles.column}>
-            {questions.slice(0, 2).map((data, index) => (
-              <Question index={index} data={data} />
-            ))}
-          </div>
-          <div className={styles.column}>
-            {questions.slice(2, 4).map((data, index) => {
-              return <Question index={index + 2} data={data} />;
-            })}
-          </div>
+          {questions.map((data,index)=>(
+            <div className={styles.column} key={index}>
+              <Question
+                index={index}
+                data={data}
+                selectedAnswer={userAnswers[index]} 
+                correctAnswer={data.correctAnswer} 
+                onAnswerSelected={handleAnswerSelection} 
+              />
+            </div>
+          ))}
         </div>
 
         <div className={styles.btnDiv}>
@@ -29,7 +43,7 @@ export const ReviewScreen = ({ setIsRetake }) => {
             text="Click me to retake the quiz!"
             component={
               <button
-                onClick={() => {
+                onClick={()=>{
                   setIsRetake(true);
                 }}
                 className={styles.retakeBtn}

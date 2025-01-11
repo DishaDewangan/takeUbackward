@@ -1,9 +1,13 @@
-export const instructionsData = {
+export const instructionsData={
   title: "Quiz Instructions",
   data: [
-    "There are four questions in this quiz.",
-    "For each question, you will be provided with four options.",
-    "You can only select one option per question.",
-    "Once you select an option, click the 'Next' button to proceed to the next question."
+    "This project name 'TakeUBackward' got its name ironically from the educational platform 'TakeUForward' by the OG Striver. While TakeUForward focuses on modern technologies, TakeUBackward gives quiz questions on old programming languages.",
+    "There are 10 questions covering both old and modern programming languages.",
+    "You will have four options to choose from for each question.",
+    "You can select only one option per question.",
+    "Click 'Next' after selecting an answer to proceed.",
+    "Your score will be based on correct answers.",
+    "After completing the quiz, you can review or retake it.",
+    "You cannot go back to previous questions."
   ]
 };

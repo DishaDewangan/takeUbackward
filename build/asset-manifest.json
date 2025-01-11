@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/takeUbackward/static/css/main.3ccc0456.css",
+    "main.js": "/takeUbackward/static/js/main.35e99188.js",
+    "index.html": "/takeUbackward/index.html",
+    "main.3ccc0456.css.map": "/takeUbackward/static/css/main.3ccc0456.css.map",
+    "main.35e99188.js.map": "/takeUbackward/static/js/main.35e99188.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3ccc0456.css",
+    "static/js/main.35e99188.js"
+  ]
+}

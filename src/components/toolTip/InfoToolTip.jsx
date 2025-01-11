@@ -1,35 +1,25 @@
-import Tooltip from "@material-ui/core/Tooltip";
-import { makeStyles } from "@material-ui/core/styles";
+import React from"react";
+import Tooltip from"@mui/material/Tooltip";
+import{styled}from"@mui/material/styles";
 
-const useStyles = makeStyles((theme) => ({
-  customTooltip: {
-    backgroundColor: "#000",
-    borderRadius: "5px",
-    color: "#fff",
-    fontSize: "14px",
-    fontFamily: ["Castoro", "cursive"],
-    fontWeight: 400,
-    padding: "10px"
+const CustomTooltip=styled(Tooltip)(({theme})=>({
+  backgroundColor:"#000",
+  borderRadius:"5px",
+  color:"#fff",
+  fontSize:"14px",
+  fontFamily:["Castoro","cursive"],
+  fontWeight:400,
+  padding:"10px",
+  "& .MuiTooltip-arrow":{
+    color:"#000",
+    fontSize:9,
   },
-  customArrow: {
-    color: "#000",
-    fontSize: 9
-  }
 }));
 
-export const InfoToolTip = ({ text, component }) => {
-  const classes = useStyles();
-  return (
-    <Tooltip
-      title={text}
-      placement={"top"}
-      classes={{
-        arrow: classes.customArrow,
-        tooltip: classes.customTooltip
-      }}
-      arrow={true}
-    >
+export const InfoToolTip=({text,component})=>{
+  return(
+    <CustomTooltip title={text} placement={"top"} arrow>
       {component}
-    </Tooltip>
+    </CustomTooltip>
   );
 };

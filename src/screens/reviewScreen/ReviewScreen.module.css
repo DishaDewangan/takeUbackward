@@ -4,7 +4,7 @@
   overflow: auto;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(90deg, #fff 50%, #ffd700 50%);
+  background: linear-gradient(90deg, #000 50%, #ff0000 50%);
 }
 
 .reviewScreen {
@@ -15,12 +15,12 @@
 
 .columnContainer {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 20px;
 }
 
 .column {
-  flex-basis: 50%;
+  flex-basis: 100%;
 }
 
 .btnDiv {
@@ -41,7 +41,7 @@
   padding: 0px 20px;
   text-align: center;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  color: #000;
+  color: #fff;
 }
 
 .btnDiv {
@@ -49,19 +49,23 @@
 }
 
 .retakeBtn {
-  composes: buttonStyling;
-  background-color: #fff;
-  border: 1px solid #fff;
+
+  background-color: #000;
+  border: 1px solid #000;
 }
 
 .retakeBtn:hover {
-  border: 1px solid #ffd700;
+  border: 1px solid #ff0000;
 }
 
-/** Responsive Styling **/
+.reviewScreen .column p,
+.reviewScreen .column div {
+  color: #fff;
+}
+
 @media (max-width: 600px) {
   .reviewScreenWrapper {
-    background: linear-gradient(180deg, #fff 50%, #ffd700 50%);
+    background: linear-gradient(180deg, #000 50%, #ff0000 50%);
   }
 
   .columnContainer {

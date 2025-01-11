@@ -5,45 +5,62 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  background: #000;
+  color: #fff;
+}
+
+.quizScreenWrapper, .resultWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .quizScreenWrapper {
-  composes: wrapperStyling;
-  background: linear-gradient(260deg, #fff 40%, #ffd700 40%);
+  background: linear-gradient(260deg, #000 60%, #ff0000 40%);
 }
 
 .resultWrapper {
-  composes: wrapperStyling;
-  background: linear-gradient(110deg, #fff 60%, #ffd700 60%);
+  background: linear-gradient(110deg, #000 40%, #ff0000 60%);
 }
 
-/* Quiz Card Screen Styling */
 .quizCard {
-  max-width: 50%;
-  overflow-wrap: break-word;
-  padding: 0em 2em;
+  width: 70%;
+  max-width: 80%;
+  padding: 1em 2em;
+  background-color: #1a1a1a;
+  border: 2px solid #ff0000;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(255, 0, 0, 0.3);
+  color: #fff;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
 }
 
-.fontStyling {
-  font-family: "Castoro", serif;
-  font-weight: 900;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-.activeQuestionNo {
-  composes: fontStyling;
-  font-size: 55px;
+.quizCard.active {
+  animation: fadeIn 1s forwards;
 }
 
+.activeQuestionNo,
 .totalQuestion {
-  composes: fontStyling;
-  font-size: 35px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ff0000;
 }
 
 .quizCard h2 {
-  font-family: "Merriweather", serif;
-  overflow-wrap: break-word;
-  font-size: 26px;
-  line-height: 1.5;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
 }
 
 .optionsDiv {
@@ -51,139 +68,139 @@
 }
 
 .optionStyling {
-  padding: 0.25em;
-  font-family: "Castoro", serif;
-  font-size: 27px;
+  padding: 0.5em 1em;
+  font-size: 1.2rem;
   cursor: pointer;
-  width: fit-content;
   width: 100%;
   border-radius: 8px;
+  background-color: #1a1a1a;
+  color: #fff;
+  border: 2px solid #1a1a1a;
+  transition: all 0.3s ease;
 }
 
 .optionStyling:hover {
-  border: 2px solid #fff;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border: 2px solid #ff0000;
+  box-shadow: 0 4px 8px rgba(255, 0, 0, 0.3);
 }
 
 .selectedAnswer {
   composes: optionStyling;
-  background-color: #fff;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
-
-.option {
-  composes: optionStyling;
+  background-color: #ff0000;
+  color: #fff;
 }
 
 .buttonStyling {
   border-radius: 10px;
   cursor: pointer;
-  font-size: 23px;
-  font-weight: 500;
-  font-family: "Castoro", cursive;
-  line-height: 48px;
-  width: 250px;
-  padding: 0px 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0.8rem 1.5rem;
   text-align: center;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  color: #000;
+  background-color: #ff0000;
+  color: #fff;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.buttonStyling:hover {
+  background-color: #e60000;
+  transform: scale(1.05);
 }
 
 .disabledDiv {
-  composes: buttonStyling;
-  background-color: #ffd700;
-  border: 1px solid #ffd700;
+  background-color: #1a1a1a !important;
+  color: #666 !important;
+  cursor: not-allowed;
+  border: none !important;
 }
 
 .nextBtnDiv {
   composes: buttonStyling;
-  background-color: #fff;
-  border: 1px solid #fff;
 }
 
-/* Result Screen Styling */
+.disabledDiv:hover {
+  background-color: #1a1a1a !important;
+  transform: none !important;
+}
+
 .resultScreen {
-  max-width: 50%;
+  max-width: 60%;
+  padding: 1em 2em;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 1em 4em;
+  background-color: #1a1a1a;
+  border: 2px solid #ff0000;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(255, 0, 0, 0.3);
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.CircularProgressbar .CircularProgressbar-text {
+  color: #fff;
 }
 
 .headerText {
-  font-size: 60px;
-  font-weight: 700;
-  font-family: "Castoro Titling", cursive;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ff0000;
+  margin-bottom: 1rem;
 }
 
 .result {
-  width: 100%;
-  height: 100%;
+  width: 700px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 1em 0em;
-}
-
-.resultChart {
-  max-width: 30%;
-  margin: 0em 1em;
-}
-
-.infoStyling {
-  padding: 0.25em;
-  cursor: pointer;
-  width: fit-content;
-  width: 100%;
-  border-radius: 8px;
+  gap: 1rem;
 }
 
 .textStyling {
-  font-family: "Castoro", cursive;
-  composes: infoStyling;
-  font-size: 21px;
+  font-size: 1.2rem;
+  color: #fff;
 }
 
 .numberStyling {
-  font-family: "Merriweather", serif;
-  composes: infoStyling;
-  font-size: 25px;
-  font-weight: 700;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ff0000;
+}
+
+.resultChart {
+  width: 50%;
+  max-width: 200px;
+  margin: 1rem 0;
+}
+
+.reviewBtn,
+.retakeBtn {
+  composes: buttonStyling;
+  margin: 1rem;
 }
 
 .reviewBtn {
-  composes: buttonStyling;
-  background-color: #ffd700;
-  border: 1px solid #ffd700;
-  margin: 1em 1em 1em 0em;
+  background-color: #ff0000;
 }
 
 .reviewBtn:hover {
-  background-color: #fff;
+  background-color: #e60000;
 }
 
 .retakeBtn {
-  composes: buttonStyling;
-  background-color: #fff;
-  border: 1px solid #fff;
-  margin: 1em 1em 1em 0em;
+  background-color: #1a1a1a;
+  border: 2px solid #ff0000;
 }
 
 .retakeBtn:hover {
-  border: 1px solid #ffd700;
+  background-color: #ff0000;
+  color: #fff;
 }
 
-.btnDiv {
-  display: flex;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-/** Responsive Styling **/
 @media (max-width: 800px) {
   .quizCard {
     max-width: 85%;
@@ -193,62 +210,24 @@
 @media (max-width: 600px) {
   .resultScreen {
     max-width: 85%;
-    margin: 1em;
+    padding: 1rem;
   }
 
-  .result {
-    flex-direction: row-reverse;
-  }
-}
-
-@media (max-width: 500px) {
-  .result {
-    flex-direction: column;
-    gap: 10px;
+  .resultChart {
+    width: 70%;
   }
 }
 
 @media (max-width: 450px) {
-  .quizCard {
-    max-width: 85%;
-  }
-
-  .activeQuestionNo {
-    font-size: 35px;
-  }
-
-  .totalQuestion {
-    font-size: 20px;
-  }
-
   .quizCard h2 {
-    font-size: 20px;
-  }
-
-  .optionsDiv {
-    padding: 1em 0em;
+    font-size: 1rem;
   }
 
   .optionStyling {
-    font-size: 18px;
-  }
-
-  .headerText {
-    font-size: 30px;
+    font-size: 0.9rem;
   }
 
   .resultChart {
-    max-width: 50%;
-  }
-}
-
-@media (max-width: 300px) {
-  .quizCard {
-    max-width: 95%;
-  }
-
-  .buttonStyling {
-    font-size: 16px;
-    width: 150px;
+    width: 80%;
   }
 }

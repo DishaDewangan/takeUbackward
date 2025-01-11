@@ -19,9 +19,43 @@
 }
 
 .option {
-  composes: optionStyling;
+  cursor: pointer;
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
 }
 
 .correctOption {
-  composes: optionStyling;
+  background-color: #d4edda;
+  border-color: #28a745;
+  color: #155724;
+  font-weight: bold;
+}
+
+.incorrectOption {
+  background-color: #f8d7da;
+  border-color: #dc3545;
+  color: #721c24;
+  font-weight: bold;
+}
+
+.option:hover {
+  background-color: #f0f0f0;
+}
+
+.tickIcon {
+  font-size: 20px;
+  margin-left: 10px;
+  color: #28a745;
+}
+
+.option,
+.correctOption,
+.incorrectOption {
+  display: flex;
+  align-items: center;
 }
