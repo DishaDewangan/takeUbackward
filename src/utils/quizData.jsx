@@ -3,7 +3,7 @@ export const quizData = {
   perQuestionScore: 1,
   questions: [
     {
-      question: "Which keyword is used to define a variable in COBOL?",
+      question: "Which keyword is used to declare a variable in COBOL?",
       choices: ["DATA", "VAR", "PIC", "VALUE"],
       correctAnswer: "DATA"
     },
