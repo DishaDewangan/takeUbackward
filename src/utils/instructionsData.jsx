@@ -8,6 +8,6 @@ export const instructionsData={
     "Click 'Next' after selecting an answer to proceed.",
     "Your score will be based on correct answers.",
     "After completing the quiz, you can review or retake it.",
-    "You cannot go back to previous questions."
+    "You can't go back to previous questions."
   ]
 };
