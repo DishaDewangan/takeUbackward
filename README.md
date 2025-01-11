@@ -84,24 +84,42 @@ TakeUBackward is a React-based responsive quiz app offering questions on both ol
 
 ---
 
-### **Functionality**
+## Features and Functionality
 
-1. **Landing Page**: 
-   - Displays instructions (from `instructions.js`) and a start button.  
+### 1. **Landing Page**:
+   - Displays instructions (from `instructions.js`) and a start button to enter the quiz.
+   - Upon clicking the "Enter Quiz" button, the quiz timer starts, and the app transitions to the next step.
 
-2. **QuizScreen**: 
-   - Shows questions (from `quizData.js`) with multiple-choice options.  
-   - Tracks user answers and moves to the next question.  
+### 2. **Instructions Page**:
+   - Displays clear instructions for the quiz.
+   - After a brief 3-second delay, the app automatically moves to the quiz component.
 
-3. **ResultScreen**: 
-   - Shows the score, correct/incorrect answers, and progress chart.  
-   - Options to review answers or retake the quiz.  
+### 3. **Quiz Component**:
+   - Displays a series of shuffled questions (from `quizData.js`) with multiple-choice options.
+   - Tracks user answers using React state and moves to the next question.
+   - Questions are shuffled for each session to offer a fresh experience every time.
 
-4. **ReviewScreen**: 
-   - Allows users to compare their answers with correct ones.  
+### 4. **User Interaction**:
+   - Users can select one answer option per question.
+   - Answers are stored in the app’s state for evaluation after completing the quiz.
 
-5. **Random Questions**: 
-   - Questions are shuffled for a fresh experience every time.  
+### 5. **Submitting the Quiz**:
+   - Once the user has answered all the questions, they click the "Finish" button.
+   - The app calculates the user's final score by comparing their answers with the correct ones.
+
+### 6. **Results Component**:
+   - Displays the user's score and shows how many questions were answered correctly.
+   - Includes two options:
+     - **Review**: Allows users to compare their answers with the correct answers.
+     - **Retake**: Provides an option to retake the quiz.
+
+### 7. **Review Screen**:
+   - After finishing the quiz, users can review the answers to compare what they answered with the correct responses.
+
+### Additional Features:
+   - **Randomized Questions**: The questions are shuffled for each session, ensuring a unique experience every time.
+   - **Progress Chart**: Displays the progress of the quiz, allowing users to track their journey.
+
 
 ---
 
