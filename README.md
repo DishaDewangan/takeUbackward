@@ -15,7 +15,7 @@ TakeUBackward is a React-based responsive quiz app offering questions on both ol
   <img src="images/Screenshot%202025-01-11%20151427.png" alt="Screenshot 3" width="300px">
   <img src="images/Screenshot%202025-01-11%20151536.png" alt="Screenshot 4" width="300px">
   <img src="images/Screenshot%202025-01-11%20151701.png" alt="Screenshot 5" width="300px">
-  <img src="images/Screenshot%202025-01-11%20151742.png" alt="Screenshot 6" width="300px">
+  <img src="images/Screenshot%20(771).png" alt="Screenshot 6" width="300px">
   <img src="images/Screenshot%202025-01-11%20152000.png" alt="Screenshot 7" width="300px">
   <img src="images/Screenshot%202025-01-11%20152030.png" alt="Screenshot 8" width="300px">
   <img src="images/Screenshot%202025-01-11%20151742.png" alt="Screenshot 9" width="300px">
