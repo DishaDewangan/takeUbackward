@@ -2,7 +2,7 @@ export const instructionsData={
   title: "Quiz Instructions",
   data: [
     "This project name 'TakeUBackward' got its name ironically from the educational platform 'TakeUForward' by the OG Striver. While TakeUForward focuses on modern technologies, TakeUBackward gives quiz questions on old programming languages.",
-    "There are 10 questions covering both old and modern programming languages.",
+    "There are 10 questions covering both old & modern programming languages.",
     "You will have 4 options to choose from for each question.",
     "You can select only 1 option per question.",
     "Click 'Next' after selecting an answer to proceed.",
