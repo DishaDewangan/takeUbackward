@@ -3,7 +3,7 @@
 ---
 
 ### **Overview**
-TakeUBackward is a React-based responsive quiz app offering questions on both old (COBOL, FORTRAN, BASIC) and modern (JavaScript) programming languages. The name is a playful twist on the educational platform "TakeUForward," which focuses on modern tech, while TakeUBackward challenges users with quizzes from older programming languages. The app includes 10 questions covering both old and modern languages.
+TakeUBackward is a React-based responsive quiz app offering questions on both old (COBOL, FORTRAN, BASIC) and modern (JavaScript) programming languages. The name is a playful twist on the educational platform "TakeUForward," which focuses on modern tech, while TakeUBackward challenges users with quizzes from older programming languages. This app includes 10 questions covering both old and modern languages.
 
 
 ---
